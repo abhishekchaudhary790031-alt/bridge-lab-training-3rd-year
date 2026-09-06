@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5 - CSS Box Model and Units</title>
+    <style>
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            margin: 0;
+            padding: 2rem;
+            font-family: Arial, sans-serif;
+            background-color: #f4f9ff;
+        }
+
+        .box {
+            width: 230px;
+            min-height: 130px;
+            margin: 2rem auto;
+            padding: 20px;
+            border: 5px solid #e76f51;
+            background-color: #fff3b0;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+        }
+
+        .units {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .unit {
+            padding: 1rem;
+            border: 2px solid #457b9d;
+            background-color: #dff3fc;
+        }
+
+        .px { font-size: 18px; }
+        .em { font-size: 1.3em; }
+        .rem { font-size: 1.5rem; }
+        .percent { width: 80%; }
+        .vw { width: 20vw; }
+        .vh { min-height: 10vh; }
+
+        pre {
+            padding: 1rem;
+            color: white;
+            background-color: #182b3a;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Box Model and Units</h1>
+    <h2>Box Model</h2>
+    <p>The box below shows content, padding, border and margin.</p>
+    <div class="box">Content area<br>Padding: 20px<br>Border: 5px<br>Margin: 2rem</div>
+    <div class="box border-box">This second box uses <code>box-sizing: border-box</code>.</div>
+    <pre><code>div {
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 15px;
+    box-sizing: border-box;
+}</code></pre>
+    <h2>Absolute and Relative Units</h2>
+    <div class="units">
+        <div class="unit px">18px: pixels</div>
+        <div class="unit">1cm: centimeters</div>
+        <div class="unit">1in = 2.54cm: inches</div>
+        <div class="unit em">1.3em: parent font size</div>
+        <div class="unit rem">1.5rem: root font size</div>
+        <div class="unit percent">80%: parent width</div>
+        <div class="unit vw">20vw: viewport width</div>
+        <div class="unit vh">10vh: viewport height</div>
+        <div class="unit">vmin and vmax: viewport dimensions</div>
+    </div>
+    <p><a href="assign 5.html">Return to Assignment 5</a></p>
+</body>
+</html>

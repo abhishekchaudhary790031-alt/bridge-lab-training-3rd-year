@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5 - CSS Colors and Backgrounds</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            font-family: Arial, sans-serif;
+            background-color: #eef5ff;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        .colors {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .color {
+            padding: 2rem 1rem;
+            border: 2px solid #173b63;
+            color: white;
+            text-align: center;
+        }
+
+        .named { background-color: purple; }
+        .hex { background-color: #ff0000; }
+        .rgb { background-color: rgb(0, 0, 255); }
+        .rgba { background-color: rgba(0, 128, 0, 0.6); }
+        .hsl { background-color: hsl(30, 100%, 50%); }
+        .hsla { background-color: hsla(240, 100%, 50%, 0.65); }
+
+        .background-example {
+            min-height: 180px;
+            margin-top: 2rem;
+            padding: 2rem;
+            color: white;
+            background-color: #264653;
+            background-image: radial-gradient(circle, #e9c46a, transparent 40%),
+                linear-gradient(135deg, #264653, #2a9d8f);
+            background-position: center, center;
+            background-size: cover, cover;
+            background-repeat: no-repeat, no-repeat;
+        }
+
+        pre {
+            padding: 1rem;
+            color: white;
+            background-color: #182b3a;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Colors and Backgrounds</h1>
+    <p>These cards demonstrate named, HEX, RGB, RGBA, HSL and HSLA colors.</p>
+    <div class="colors">
+        <div class="color named">Named: purple</div>
+        <div class="color hex">HEX: #FF0000</div>
+        <div class="color rgb">RGB: rgb(0, 0, 255)</div>
+        <div class="color rgba">RGBA: rgba(0, 128, 0, 0.6)</div>
+        <div class="color hsl">HSL: hsl(30, 100%, 50%)</div>
+        <div class="color hsla">HSLA: hsla(240, 100%, 50%, 0.65)</div>
+    </div>
+    <div class="background-example">
+        <h2>Background image and gradient layers</h2>
+        <p>This element uses background-color, background-image, position, size and repeat.</p>
+    </div>
+    <pre><code>body {
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+div {
+    background-image: url("layer1.png"), url("layer2.png");
+    background-position: center, top right;
+}</code></pre>
+    <p><a href="assign 5.html">Return to Assignment 5</a></p>
+</body>
+</html>

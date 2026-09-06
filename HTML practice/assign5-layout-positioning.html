@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5 - CSS Layout and Positioning</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            font-family: Arial, sans-serif;
+            background-color: #eef5ff;
+        }
+
+        .display-demo span {
+            display: inline;
+            padding: 0.5rem;
+            background-color: #a8dadc;
+        }
+
+        .button {
+            display: inline-block;
+            width: 130px;
+            padding: 0.5rem;
+            text-align: center;
+            background-color: #f4a261;
+        }
+
+        .flex,
+        .grid {
+            gap: 1rem;
+            margin: 1rem 0;
+            padding: 1rem;
+            border: 2px solid #457b9d;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .item {
+            padding: 1rem;
+            text-align: center;
+            background-color: #bde0fe;
+        }
+
+        .position-area {
+            position: relative;
+            min-height: 230px;
+            border: 3px solid #1d3557;
+            background-color: #f1faee;
+        }
+
+        .box {
+            position: absolute;
+            width: 110px;
+            padding: 1rem;
+            color: white;
+            text-align: center;
+        }
+
+        .one {
+            top: 20px;
+            left: 30px;
+            z-index: 1;
+            background-color: coral;
+        }
+
+        .two {
+            right: 30px;
+            bottom: 20px;
+            z-index: 2;
+            background-color: teal;
+        }
+
+        pre {
+            padding: 1rem;
+            color: white;
+            background-color: #182b3a;
+        }
+
+        @media (max-width: 768px) {
+            .flex {
+                flex-direction: column;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Layout and Positioning</h1>
+    <h2>Display Modes</h2>
+    <p class="display-demo">A span is <span>inline</span> and this <span class="button">button is inline-block</span>.</p>
+    <h2>Flexbox Layout</h2>
+    <div class="flex">
+        <div class="item">Flex 1</div>
+        <div class="item">Flex 2</div>
+        <div class="item">Flex 3</div>
+    </div>
+    <h2>Grid Layout</h2>
+    <div class="grid">
+        <div class="item">Grid 1</div>
+        <div class="item">Grid 2</div>
+        <div class="item">Grid 3</div>
+    </div>
+    <h2>Positioning and z-index</h2>
+    <div class="position-area">
+        <div class="box one">Absolute Box 1</div>
+        <div class="box two">Absolute Box 2</div>
+    </div>
+    <pre><code>.container { position: relative; }
+.box1 {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    z-index: 1;
+}
+.box2 {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    z-index: 2;
+}</code></pre>
+    <h2>Float and Position</h2>
+    <table border="1">
+        <tr><th>Feature</th><th>Float</th><th>Position</th></tr>
+        <tr><td>Used for</td><td>Wrapping text around elements</td><td>Precise placement</td></tr>
+        <tr><td>Flow</td><td>Affects document flow</td><td>Can remove element from flow</td></tr>
+        <tr><td>Control</td><td>Limited</td><td>Top, left and z-index control</td></tr>
+    </table>
+    <p><a href="assign 5.html">Return to Assignment 5</a></p>
+</body>
+</html>

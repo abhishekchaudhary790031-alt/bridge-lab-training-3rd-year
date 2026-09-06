@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4 - IFrame Demonstration</title>
+</head>
+<body>
+    <header>
+        <h1>IFrame Demonstration</h1>
+        <p>Examples of iframe content, attributes and safety controls.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Embedded HTML with srcdoc</h2>
+            <iframe
+                title="Embedded HTML example"
+                srcdoc="<h2>Embedded content</h2><p>This is a separate document inside the iframe.</p>"
+                width="450"
+                height="150"
+                loading="lazy"
+                sandbox>
+            </iframe>
+        </section>
+        <section>
+            <h2>Recommended iframe markup</h2>
+            <pre><code>&lt;iframe
+    title="Accessible embedded page"
+    src="https://example.com"
+    loading="lazy"
+    sandbox&gt;
+&lt;/iframe&gt;</code></pre>
+            <p>The title supports accessibility, lazy loading improves performance, and sandbox limits iframe permissions.</p>
+        </section>
+    </main>
+    <footer><a href="assign 4.html">Return to Assignment 4</a></footer>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4 - HTML Form Demonstration</title>
+</head>
+<body>
+    <header>
+        <h1>Student Registration Form</h1>
+    </header>
+    <main>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Student Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="course">Course:</label>
+                <select id="course" name="course">
+                    <option>HTML Basics</option>
+                    <option>Web Design</option>
+                    <option>Accessibility</option>
+                </select><br><br>
+                <label for="comments">Comments:</label><br>
+                <textarea id="comments" name="comments" rows="5" cols="40"></textarea><br><br>
+                <label><input type="checkbox" name="agreement" required> I agree to the learning terms.</label>
+            </fieldset>
+            <br>
+            <button type="submit">Register</button>
+            <button type="reset">Clear</button>
+        </form>
+    </main>
+    <footer><a href="assign 4.html">Return to Assignment 4</a></footer>
+</body>
+</html>

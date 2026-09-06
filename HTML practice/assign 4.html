@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML Assignment 4 covering iframes, metadata, entities, URI encoding and forms">
+    <meta name="author" content="Vaibhav Chotu">
+    <title>Vaibhav Chotu - HTML Assignment 4</title>
+</head>
+<body>
+    <header>
+        <h1>HTML Assignment 4</h1>
+        <p>Topics: IFrames, HTML Head, Entities, URI Encoding, Frames and Forms</p>
+    </header>
+
+    <nav>
+        <a href="#iframes">IFrames</a> |
+        <a href="#head">HTML Head</a> |
+        <a href="#entities">Entities</a> |
+        <a href="#encoding">URI Encoding</a> |
+        <a href="#frames">Legacy Frames</a> |
+        <a href="#forms">Forms</a>
+    </nav>
+
+    <main>
+        <section id="iframes">
+            <h2>1. IFrame Examples</h2>
+            <p>An iframe embeds another HTML document inside the current page.</p>
+            <iframe
+                title="Embedded learning message"
+                srcdoc="<h2>Welcome to HTML</h2><p>This content is displayed inside an iframe.</p>"
+                width="420"
+                height="140"
+                loading="lazy"
+                sandbox>
+            </iframe>
+
+            <h3>Iframe Attributes</h3>
+            <table border="1">
+                <tr><th>Attribute</th><th>Purpose</th></tr>
+                <tr><td>src</td><td>Specifies the embedded page URL.</td></tr>
+                <tr><td>title</td><td>Provides an accessible description.</td></tr>
+                <tr><td>width and height</td><td>Set the display dimensions.</td></tr>
+                <tr><td>loading="lazy"</td><td>Loads the iframe when it is near the viewport.</td></tr>
+                <tr><td>sandbox</td><td>Restricts potentially unsafe iframe capabilities.</td></tr>
+            </table>
+
+            <h3>Responsive IFrame Structure</h3>
+            <pre><code>&lt;div&gt;
+    &lt;iframe title="Responsive video" src="https://example.com" loading="lazy"&gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+            <p>The surrounding container can be sized by the page layout so the embedded content remains usable on different screens.</p>
+        </section>
+
+        <section id="head">
+            <h2>2. HTML Head and Metadata</h2>
+            <p>The <code>&lt;head&gt;</code> section stores information about a webpage rather than visible page content.</p>
+            <pre><code>&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="description" content="HTML learning page"&gt;
+    &lt;title>HTML Learning Page&lt;/title&gt;
+&lt;/head&gt;</code></pre>
+            <dl>
+                <dt>Charset</dt>
+                <dd>Defines the character encoding used by the document.</dd>
+                <dt>Viewport</dt>
+                <dd>Helps the page scale correctly on mobile devices.</dd>
+                <dt>Description</dt>
+                <dd>Summarizes the page for search engines and previews.</dd>
+            </dl>
+        </section>
+
+        <section id="entities">
+            <h2>3. HTML Entities</h2>
+            <p>Entities display reserved characters and symbols safely in HTML.</p>
+            <table border="1">
+                <tr><th>Entity</th><th>Displayed result</th><th>Meaning</th></tr>
+                <tr><td>&amp;lt;</td><td>&lt;</td><td>Less-than sign</td></tr>
+                <tr><td>&amp;gt;</td><td>&gt;</td><td>Greater-than sign</td></tr>
+                <tr><td>&amp;amp;</td><td>&amp;</td><td>Ampersand</td></tr>
+                <tr><td>&amp;quot;</td><td>&quot;</td><td>Quotation mark</td></tr>
+                <tr><td>&amp;copy;</td><td>&copy;</td><td>Copyright symbol</td></tr>
+                <tr><td>&amp;nbsp;</td><td>A&nbsp;space</td><td>Non-breaking space</td></tr>
+            </table>
+        </section>
+
+        <section id="encoding">
+            <h2>4. URI Encoding</h2>
+            <p>URI encoding replaces unsafe or reserved characters with a percent sign followed by hexadecimal digits.</p>
+            <table border="1">
+                <tr><th>Original text</th><th>Encoded form</th></tr>
+                <tr><td>hello world</td><td>hello%20world</td></tr>
+                <tr><td>student@example.com</td><td>student%40example.com</td></tr>
+                <tr><td>HTML &amp; CSS</td><td>HTML%20%26%20CSS</td></tr>
+                <tr><td>name=Vaibhav</td><td>name%3DVaibhav</td></tr>
+            </table>
+            <p>Example link with encoded query text:
+                <a href="https://example.com/search?q=hello%20world">Search for hello world</a>
+            </p>
+        </section>
+
+        <section id="frames">
+            <h2>5. Legacy HTML Frames</h2>
+            <p>The old <code>&lt;frameset&gt;</code> and <code>&lt;frame&gt;</code> elements divided a browser window into sections. They are obsolete in HTML5, so modern pages should use regular layout elements and iframes instead.</p>
+            <pre><code>&lt;!-- Historical example; do not use in new HTML5 pages --&gt;
+&lt;frameset cols="50%,50%"&gt;
+    &lt;frame src="left.html"&gt;
+    &lt;frame src="right.html"&gt;
+&lt;/frameset&gt;</code></pre>
+        </section>
+
+        <section id="forms">
+            <h2>6. Student Registration Form</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    <p>
+                        <label for="full-name">Full name:</label>
+                        <input type="text" id="full-name" name="full-name" required>
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+                    <p>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" minlength="8" required>
+                    </p>
+                    <p>
+                        <label for="birth-date">Date of birth:</label>
+                        <input type="date" id="birth-date" name="birth-date">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Course Preferences</legend>
+                    <p>
+                        <label for="course">Choose a course:</label>
+                        <select id="course" name="course">
+                            <option value="html">HTML Basics</option>
+                            <option value="web-design">Web Design</option>
+                            <option value="accessibility">Web Accessibility</option>
+                        </select>
+                    </p>
+                    <p>Study mode:</p>
+                    <label><input type="radio" name="mode" value="online" checked> Online</label>
+                    <label><input type="radio" name="mode" value="classroom"> Classroom</label>
+                    <p>Interests:</p>
+                    <label><input type="checkbox" name="interest" value="forms"> Forms</label>
+                    <label><input type="checkbox" name="interest" value="iframes"> IFrames</label>
+                    <label><input type="checkbox" name="interest" value="semantics"> Semantic HTML</label>
+                    <p>
+                        <label for="message">Why do you want to learn HTML?</label><br>
+                        <textarea id="message" name="message" rows="4" cols="45"></textarea>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <label for="portfolio">Portfolio URL:</label>
+                    <input type="url" id="portfolio" name="portfolio" placeholder="https://example.com">
+                </p>
+                <p>
+                    <label for="satisfaction">Learning satisfaction:</label>
+                    <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" value="8">
+                </p>
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Reset Form</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vaibhav Chotu | HTML Assignment 4</p>
+    </footer>
+</body>
+</html>

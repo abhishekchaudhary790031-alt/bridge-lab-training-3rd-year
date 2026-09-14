@@ -1,0 +1,7 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: #f4f7fb; color: #172033; font: 16px/1.5 system-ui, sans-serif; }
+.wrap { max-width: 800px; margin: 0 auto; padding: 4rem 1.5rem; }
+h1 { color: #2446a8; }
+.links { display: grid; gap: .75rem; padding-left: 1.5rem; }
+a { color: #2446a8; font-weight: 700; }
+a:hover { color: #d04a24; }

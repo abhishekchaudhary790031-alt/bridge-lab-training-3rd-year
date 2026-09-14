@@ -1,0 +1,8 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; color: #1b2639; background: #eaf1f8; font: 1rem/1.5 system-ui, sans-serif; }
+main { width: 100%; padding: 2rem; text-align: center; }
+section { display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+article { display: flex; flex-direction: column; justify-content: center; padding: 1.25rem; border-radius: 1rem; overflow: auto; text-align: left; }
+.pixels { width: 220px; height: 160px; background: #ffcfb2; }
+.percent { width: 30%; min-height: 25vh; background: #b8e0d2; }
+.em { width: 18em; max-width: 90%; min-height: 10em; background: #c7d2f4; }

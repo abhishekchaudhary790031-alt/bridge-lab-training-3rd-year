@@ -1,0 +1,7 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; color: #243049; background: #f1f4fa; font: 1rem/1.5 system-ui, sans-serif; }
+form { width: min(500px, calc(100% - 2rem)); display: flex; flex-direction: column; gap: .55rem; padding: 2rem; border-radius: 1rem; background: white; box-shadow: 0 12px 35px #253c6818; }
+h1 { margin-top: 0; } input, textarea { width: 100%; padding: .8rem; border: 1px solid #c6cfdd; border-radius: .45rem; font: inherit; resize: vertical; }
+input:focus { outline: 3px solid #7dc6a9; outline-offset: 3px; } textarea:focus { outline: 3px dashed #e8a453; outline-offset: 4px; }
+button { margin-top: .75rem; padding: .85rem; border: 0; border-radius: .45rem; color: white; background: #31569c; font: inherit; font-weight: 700; cursor: pointer; transition: box-shadow .2s; }
+button:hover { box-shadow: 0 5px 12px #31569c55; }

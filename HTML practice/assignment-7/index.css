@@ -1,0 +1,7 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; color: #1c2841; background: #f3f6fb; font: 1rem/1.5 system-ui, sans-serif; }
+.wrap { max-width: 760px; margin: auto; padding: 4rem 1.5rem; }
+h1 { color: #2646a3; }
+ol { display: grid; gap: .7rem; padding-left: 1.5rem; }
+a { color: #2646a3; font-weight: 700; }
+a:hover { color: #bf4d2e; }

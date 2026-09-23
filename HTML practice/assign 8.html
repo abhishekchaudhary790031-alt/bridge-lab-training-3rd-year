@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A visual comparison of the CSS content-box and border-box sizing models.">
+  <title>Box-Sizing Comparison</title>
+  <link rel="stylesheet" href="assign 8.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="eyebrow">CSS fundamentals</p>
+    <h1>Understanding <code>box-sizing</code></h1>
+    <p class="intro">
+      Both cards use the same declared width, padding, and border. Their sizing
+      models determine how much space they occupy.
+    </p>
+  </header>
+
+  <main class="comparison" aria-labelledby="comparison-title">
+    <h2 id="comparison-title">Compare the two sizing models</h2>
+    <div class="box-grid">
+      <article class="comparison-card content-box-card">
+        <div class="card-label">Example 01</div>
+        <h3><code>content-box</code></h3>
+        <p class="model-description">
+          The default model. Width applies only to the content, so padding and
+          borders are added to the final size.
+        </p>
+        <div class="demo-box content-box">
+          <strong>Declared width: 300px</strong>
+          <span>Content width: 300px</span>
+          <span>Padding + border are added</span>
+        </div>
+        <dl class="measurements">
+          <div>
+            <dt>CSS rule</dt>
+            <dd><code>box-sizing: content-box;</code></dd>
+          </div>
+          <div>
+            <dt>Rendered width</dt>
+            <dd><strong>348px</strong></dd>
+          </div>
+        </dl>
+      </article>
+
+      <article class="comparison-card border-box-card">
+        <div class="card-label">Example 02</div>
+        <h3><code>border-box</code></h3>
+        <p class="model-description">
+          The predictable model. The declared width includes both the padding
+          and border, keeping the total size at exactly 300px.
+        </p>
+        <div class="demo-box border-box">
+          <strong>Declared width: 300px</strong>
+          <span>Content width: 252px</span>
+          <span>Padding + border fit inside</span>
+        </div>
+        <dl class="measurements">
+          <div>
+            <dt>CSS rule</dt>
+            <dd><code>box-sizing: border-box;</code></dd>
+          </div>
+          <div>
+            <dt>Rendered width</dt>
+            <dd><strong>300px</strong></dd>
+          </div>
+        </dl>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>Key takeaway:</strong> <code>border-box</code> makes width calculations easier to predict.</p>
+  </footer>
+</body>
+</html>

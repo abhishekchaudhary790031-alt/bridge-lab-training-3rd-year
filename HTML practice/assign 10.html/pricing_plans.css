@@ -1,0 +1,8 @@
+/* Q8 hover effect required by the assignment. */
+.pricing-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.14) !important;
+}

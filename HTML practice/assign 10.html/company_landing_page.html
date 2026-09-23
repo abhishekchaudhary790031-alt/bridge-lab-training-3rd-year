@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaTech | Company Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="company_landing_page.css">
+</head>
+<body>
+<header>
+  <!-- Bootstrap navbar: responsive navigation with collapse utilities -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">NovaTech</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- .container + .row + .col provide the core Bootstrap grid layout -->
+  <section class="hero-section py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <p class="text-uppercase fw-semibold text-primary mb-2">Smart tools for growing teams</p>
+          <h1 class="display-3 fw-bold">Build better products with NovaTech.</h1>
+          <p class="lead text-secondary">
+            A simple workspace for planning, collaboration, and customer insights—all in one place.
+          </p>
+          <a href="#contact" class="btn btn-primary btn-lg px-4">Get Started</a>
+        </div>
+        <div class="col-lg-5">
+          <img class="img-fluid rounded-4 shadow" alt="Team collaborating in a modern office"
+               src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <div class="feature-box h-100 p-4 bg-white rounded-4 shadow-sm">
+            <h2 class="h5 fw-bold">Plan</h2>
+            <p class="mb-0 text-secondary">Turn ideas into clear project milestones and goals.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box h-100 p-4 bg-white rounded-4 shadow-sm">
+            <h2 class="h5 fw-bold">Collaborate</h2>
+            <p class="mb-0 text-secondary">Keep teams aligned with shared tasks and updates.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box h-100 p-4 bg-white rounded-4 shadow-sm">
+            <h2 class="h5 fw-bold">Grow</h2>
+            <p class="mb-0 text-secondary">Understand customers and improve every release.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact" class="py-4 bg-dark text-white text-center">
+  <div class="container">
+    <p class="mb-1 fw-semibold">NovaTech</p>
+    <p class="mb-0 text-white-50">hello@novatech.example · +91 90000 12345</p>
+  </div>
+</footer>
+</body>
+</html>

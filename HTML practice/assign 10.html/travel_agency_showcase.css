@@ -1,0 +1,23 @@
+/* Q10 custom carousel and responsive styling. */
+body {
+  background: #ffffff;
+}
+.destination-img {
+  height: 560px;
+  object-fit: cover;
+}
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  bottom: 2rem;
+}
+@media (max-width: 700px) {
+  .destination-img {
+    height: 360px;
+  }
+  .carousel-caption {
+    bottom: 1rem;
+    padding: 0.75rem;
+  }
+}

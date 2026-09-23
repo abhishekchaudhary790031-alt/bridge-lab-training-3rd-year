@@ -1,0 +1,13 @@
+/* Q3 custom hover transition for product cards. */
+.product-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+.product-card img {
+  height: 210px;
+  object-fit: cover;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12) !important;
+}

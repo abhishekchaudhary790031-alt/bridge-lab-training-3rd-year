@@ -1,0 +1,10 @@
+/* Q6 dashboard styling. */
+body {
+  background: #f8f9fa;
+}
+.summary-well {
+  transition: transform 0.2s ease;
+}
+.summary-well:hover {
+  transform: translateY(-2px);
+}

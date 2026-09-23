@@ -1,0 +1,16 @@
+/* Q2 custom styling. Spacing and alignment are primarily Bootstrap utilities. */
+body {
+  font-family: Arial, sans-serif;
+}
+.portfolio-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.portfolio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08) !important;
+}
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}

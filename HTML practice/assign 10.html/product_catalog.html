@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Catalog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="product_catalog.css">
+</head>
+<body>
+<header class="py-4 border-bottom bg-white">
+  <div class="container d-flex justify-content-between align-items-center">
+    <h1 class="h3 mb-0 fw-bold">PixelMart</h1>
+    <span class="text-secondary">Featured Products</span>
+  </div>
+</header>
+
+<main>
+  <section class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="display-6 fw-bold">Smart Tech Picks</h2>
+      <p class="lead text-secondary">Simple products for work, study, and everyday life.</p>
+    </div>
+
+    <!-- row-cols controls 1 column on phones, 2 on tablets, 4 on desktop -->
+    <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4">
+      <div class="col">
+        <article class="card h-100 product-card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1518441902117-f0aee25f2527?auto=format&fit=crop&w=700&q=80"
+               class="card-img-top" alt="Wireless headphones">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5">AirSound Headphones</h3>
+            <p class="text-secondary">Wireless comfort with rich audio.</p>
+            <p class="fw-bold fs-5">₹3,499</p>
+            <button class="btn btn-primary mt-auto">Add to Cart</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 product-card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80"
+               class="card-img-top" alt="Smart watch">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5">Pulse Smartwatch</h3>
+            <p class="text-secondary">Fitness, notifications, and style.</p>
+            <p class="fw-bold fs-5">₹4,999</p>
+            <button class="btn btn-primary mt-auto">Add to Cart</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 product-card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=700&q=80"
+               class="card-img-top" alt="Laptop on desk">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5">WorkBook Laptop</h3>
+            <p class="text-secondary">Portable performance for busy days.</p>
+            <p class="fw-bold fs-5">₹54,999</p>
+            <button class="btn btn-primary mt-auto">Add to Cart</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 product-card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80"
+               class="card-img-top" alt="Over-ear headphones">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5">Studio Max</h3>
+            <p class="text-secondary">Balanced sound for creators.</p>
+            <p class="fw-bold fs-5">₹6,499</p>
+            <button class="btn btn-primary mt-auto">Add to Cart</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="py-4 bg-dark text-white text-center">
+  <p class="mb-0">PixelMart · Fast shopping for modern essentials</p>
+</footer>
+</body>
+</html>

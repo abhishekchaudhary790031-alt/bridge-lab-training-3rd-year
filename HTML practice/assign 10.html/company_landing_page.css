@@ -1,0 +1,17 @@
+/* Q1 custom styling; Bootstrap handles the responsive grid and utilities. */
+body {
+  font-family: Arial, sans-serif;
+}
+.hero-section {
+  background: linear-gradient(135deg, #f7fbff, #eef5ff);
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+}
+.feature-box {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08) !important;
+}

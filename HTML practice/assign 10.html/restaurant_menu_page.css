@@ -1,0 +1,11 @@
+/* Q4 custom restaurant styling. */
+body {
+  font-family: Georgia, serif;
+  background: #fffaf4;
+}
+header {
+  background: linear-gradient(135deg, #222, #4a3726);
+}
+table {
+  background: white;
+}

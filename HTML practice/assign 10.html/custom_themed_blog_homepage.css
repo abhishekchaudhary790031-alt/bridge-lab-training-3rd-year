@@ -1,0 +1,28 @@
+/* Q5 custom Bootstrap theme variables. */
+:root {
+  --bs-primary: #7c3aed;
+  --bs-primary-rgb: 124, 58, 237;
+  --bs-font-sans-serif: "Manrope", Arial, sans-serif;
+}
+body {
+  font-family: var(--bs-font-sans-serif);
+  background: #fcfbff;
+}
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+}
+.blog-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.10) !important;
+}
+.card-img-top {
+  height: 240px;
+  object-fit: cover;
+}

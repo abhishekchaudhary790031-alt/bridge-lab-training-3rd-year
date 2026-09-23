@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Q6 | Responsive CSS Cheat Sheet</title><link rel="stylesheet" href="responsive-css-cheat-sheet.css"></head><body><header><p>Question 6</p><h1>Responsive CSS cheat sheet</h1><span>Practical properties for layouts that adapt.</span></header><main><section><h2>Layout</h2><pre><code>.layout {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+}</code></pre></section><section><h2>Fluid type</h2><pre><code>h1 {
+  font-size: clamp(2rem, 6vw, 5rem);
+}</code></pre></section><section><h2>Breakpoints</h2><pre><code>@media (max-width: 600px) {
+  .nav { display: none; }
+}</code></pre></section><section><h2>Safe sizing</h2><pre><code>* { box-sizing: border-box; }
+img { max-width: 100%; height: auto; }</code></pre></section></main></body></html>

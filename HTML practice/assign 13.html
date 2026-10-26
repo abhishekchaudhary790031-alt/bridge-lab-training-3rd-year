@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JavaScript Assignment 3: ten standalone ES feature practice programs.">
+  <title>JavaScript Assignment 3 | Questions 1-10</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #172033;
+      background: #f3f6fb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 20px 56px;
+    }
+
+    header {
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    header p,
+    .instructions {
+      color: #526078;
+      line-height: 1.6;
+    }
+
+    .instructions {
+      padding: 16px 20px;
+      border-left: 4px solid #5068d8;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .questions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    article {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      border: 1px solid #e1e7f0;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 4px 14px #1720330a;
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+    }
+
+    article p {
+      flex: 1;
+      margin: 0 0 16px;
+      color: #526078;
+      line-height: 1.5;
+    }
+
+    button {
+      padding: 10px 14px;
+      border: 0;
+      border-radius: 7px;
+      color: #fff;
+      background: #4057c9;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover,
+    button:focus-visible {
+      background: #2f43aa;
+    }
+
+    #status {
+      min-height: 1.5em;
+      margin-top: 20px;
+      color: #33415c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JavaScript Assignment 3</h1>
+    <p>Lectures 7-10 · JavaScript ES Features · Questions 1-10</p>
+  </header>
+
+  <p class="instructions">
+    Open this page in a browser, open Developer Tools (F12), and select a question.
+    Each button runs that question's standalone JavaScript file. Read the output in
+    the Console. Edit the sample values at the top of each file to try other inputs.
+    To inspect a program in VS Code, add a breakpoint beside the indicated variables
+    and watch them in the Run and Debug panel.
+  </p>
+
+  <main class="questions">
+    <article>
+      <h2>Q1. Dynamic Data Parser</h2>
+      <p>Convert mixed API values and separate valid numbers from invalid values.</p>
+      <button type="button" data-script="assign13-question-01.js">Run Q1</button>
+    </article>
+    <article>
+      <h2>Q2. Employee Bonus Calculator</h2>
+      <p>Validate employee data, calculate bonuses, and handle errors.</p>
+      <button type="button" data-script="assign13-question-02.js">Run Q2</button>
+    </article>
+    <article>
+      <h2>Q3. Transaction Validator</h2>
+      <p>Validate transactions, categorize errors, and report the results.</p>
+      <button type="button" data-script="assign13-question-03.js">Run Q3</button>
+    </article>
+    <article>
+      <h2>Q4. Debugging Mystery</h2>
+      <p>Fix undeclared assignment in strict mode and inspect scope.</p>
+      <button type="button" data-script="assign13-question-04.js">Run Q4</button>
+    </article>
+    <article>
+      <h2>Q5. Hoisting Lab</h2>
+      <p>Compare var, let, function declarations, and arrow functions.</p>
+      <button type="button" data-script="assign13-question-05.js">Run Q5</button>
+    </article>
+    <article>
+      <h2>Q6. Pyramid Pattern Generator</h2>
+      <p>Generate a pyramid and compare let and var loop behavior.</p>
+      <button type="button" data-script="assign13-question-06.js">Run Q6</button>
+    </article>
+    <article>
+      <h2>Q7. Smart Calculator</h2>
+      <p>Run calculator operations with custom error handling.</p>
+      <button type="button" data-script="assign13-question-07.js">Run Q7</button>
+    </article>
+    <article>
+      <h2>Q8. Strict Mode Showdown</h2>
+      <p>Compare strict and non-strict errors with an ES6-safe solution.</p>
+      <button type="button" data-script="assign13-question-08.js">Run Q8</button>
+    </article>
+    <article>
+      <h2>Q9. JSON Audit</h2>
+      <p>Parse and validate JSON records, including under-18 ages.</p>
+      <button type="button" data-script="assign13-question-09.js">Run Q9</button>
+    </article>
+    <article>
+      <h2>Q10. Nested Hoisting and Closures</h2>
+      <p>Inspect separate function scopes and compare nested arrow functions.</p>
+      <button type="button" data-script="assign13-question-10.js">Run Q10</button>
+    </article>
+  </main>
+
+  <p id="status" role="status" aria-live="polite"></p>
+
+  <script>
+    const statusMessage = document.querySelector("#status");
+
+    document.querySelectorAll("[data-script]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const script = document.createElement("script");
+        script.src = button.dataset.script;
+        script.onload = () => {
+          statusMessage.textContent = `${button.textContent} finished. Check the Console for its output.`;
+        };
+        script.onerror = () => {
+          statusMessage.textContent = `Could not load ${button.dataset.script}. Make sure the HTML and JavaScript files are in the same folder.`;
+        };
+        document.body.append(script);
+      });
+    });
+  </script>
+</body>
+</html>

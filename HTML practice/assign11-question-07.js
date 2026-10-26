@@ -6,14 +6,18 @@
   const userGuess = 24;
   let result;
 
-  if (userGuess === secretNumber) {
-    result = "Correct guess!";
-  } else if (Math.abs(userGuess - secretNumber) <= 3) {
-    result = "Very close!";
-  } else if (userGuess > secretNumber) {
-    result = "Too high";
+  if (userGuess >= 1 && userGuess <= 50) {
+    if (userGuess === secretNumber) {
+      result = "Correct guess!";
+    } else if (Math.abs(userGuess - secretNumber) <= 3) {
+      result = "Very close!";
+    } else if (userGuess > secretNumber) {
+      result = "Too high";
+    } else {
+      result = "Too low";
+    }
   } else {
-    result = "Too low";
+    result = "Enter a guess between 1 and 50.";
   }
 
   console.log(`Secret number: ${secretNumber}`);

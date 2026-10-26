@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JavaScript Assignment 2: ten standalone JavaScript practice programs.">
+  <title>JavaScript Assignment 2 | Questions 1-10</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #172033;
+      background: #f3f6fb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 20px 56px;
+    }
+
+    header {
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    header p,
+    .instructions {
+      color: #526078;
+      line-height: 1.6;
+    }
+
+    .instructions {
+      padding: 16px 20px;
+      border-left: 4px solid #5068d8;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .questions {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    article {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      border: 1px solid #e1e7f0;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 4px 14px #1720330a;
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+    }
+
+    article p {
+      flex: 1;
+      margin: 0 0 16px;
+      color: #526078;
+      line-height: 1.5;
+    }
+
+    button {
+      padding: 10px 14px;
+      border: 0;
+      border-radius: 7px;
+      color: #fff;
+      background: #4057c9;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover,
+    button:focus-visible {
+      background: #2f43aa;
+    }
+
+    #status {
+      min-height: 1.5em;
+      margin-top: 20px;
+      color: #33415c;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JavaScript Assignment 2</h1>
+    <p>Lectures 4-6 · JavaScript Operators · Questions 1-10</p>
+  </header>
+
+  <p class="instructions">
+    Open this page in a browser, open Developer Tools (F12), and select a question.
+    Each button runs that question's standalone JavaScript file. Read the output in
+    the Console. Edit the sample values at the top of each file to try other inputs.
+  </p>
+
+  <main class="questions">
+    <article>
+      <h2>Q1. Scope Conflict Resolver</h2>
+      <p>Calculate employee salary and demonstrate local and global scope.</p>
+      <button type="button" data-script="assign12-question-01.js">Run Q1</button>
+    </article>
+    <article>
+      <h2>Q2. String Manipulation Report</h2>
+      <p>Clean, title-case, and format a product name.</p>
+      <button type="button" data-script="assign12-question-02.js">Run Q2</button>
+    </article>
+    <article>
+      <h2>Q3. Math Utility Dashboard</h2>
+      <p>Display rounding, square root, power, and a random number.</p>
+      <button type="button" data-script="assign12-question-03.js">Run Q3</button>
+    </article>
+    <article>
+      <h2>Q4. Array Performance Analyzer</h2>
+      <p>Generate eight scores and summarize student performance.</p>
+      <button type="button" data-script="assign12-question-04.js">Run Q4</button>
+    </article>
+    <article>
+      <h2>Q5. Boolean Logic Access System</h2>
+      <p>Check security conditions for multiple smart-home scenarios.</p>
+      <button type="button" data-script="assign12-question-05.js">Run Q5</button>
+    </article>
+    <article>
+      <h2>Q6. Event-Based Counter</h2>
+      <p>Simulate increment and decrement events with nested functions.</p>
+      <button type="button" data-script="assign12-question-06.js">Run Q6</button>
+    </article>
+    <article>
+      <h2>Q7. Customer Feedback Processor</h2>
+      <p>Count feedback words and check for negative terms.</p>
+      <button type="button" data-script="assign12-question-07.js">Run Q7</button>
+    </article>
+    <article>
+      <h2>Q8. Dynamic Discount Evaluator</h2>
+      <p>Apply category discounts and the qualifying cart discount.</p>
+      <button type="button" data-script="assign12-question-08.js">Run Q8</button>
+    </article>
+    <article>
+      <h2>Q9. Odd-Even Number Analyzer</h2>
+      <p>Classify numbers 1-30 as FizzBuzz, Even, or Odd.</p>
+      <button type="button" data-script="assign12-question-09.js">Run Q9</button>
+    </article>
+    <article>
+      <h2>Q10. Departmental Employee Evaluator</h2>
+      <p>Evaluate department performance scores with nested conditions.</p>
+      <button type="button" data-script="assign12-question-10.js">Run Q10</button>
+    </article>
+  </main>
+
+  <p id="status" role="status" aria-live="polite"></p>
+
+  <script>
+    const statusMessage = document.querySelector("#status");
+
+    document.querySelectorAll("[data-script]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const script = document.createElement("script");
+        script.src = button.dataset.script;
+        script.onload = () => {
+          statusMessage.textContent = `${button.textContent} finished. Check the Console for its output.`;
+        };
+        script.onerror = () => {
+          statusMessage.textContent = `Could not load ${button.dataset.script}. Make sure the HTML and JavaScript files are in the same folder.`;
+        };
+        document.body.append(script);
+      });
+    });
+  </script>
+</body>
+</html>
